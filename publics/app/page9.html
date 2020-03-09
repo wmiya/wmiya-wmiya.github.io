@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	(function(){
+		var w = window.screen.width;
+			var targetW = 640;
+			var scale = w/targetW;
+			var meta = document.createElement("meta");
+			meta.name = "viewport";
+			meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+			document.head.appendChild(meta);
+	})()
+	</script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		img {
+			vertical-align: top;
+			width: 100%;
+			height: 100%;
+		}
+		#p8{
+			display: none;
+		}
+		#p8_bg {
+			position: relative;
+			width: 640px;
+			height: 1040px;
+		}
+	</style>
+</head>
+<body>
+	<div id="p8_bg">
+		<img src="img/p4_bg.png" alt="">
+	</div>
+	<div id="p8">
+		<div id="p8_back">
+			<img src="img/p3_back.png">
+		</div>
+		<div id="p8_first">
+			<div id="p8_cont_bg">
+				<img src="img/p4_cont_bg.png">
+			</div>
+			<div id="p8_pic1">
+				<img src="img/p8_pic1.png">
+			</div>
+			<div id="p8_pic2">
+				<img src="img/p8_pic2.png">
+			</div>
+			<div id="p8_man">
+				<img src="img/p8_man.png">
+			</div>
+			<div id="p8_pic3">
+				<img src="img/p8_pic3.png">
+			</div>
+		</div>
+		<div id="p8_last">
+			<div id="p8_cont_bg">
+				<img src="img/p4_cont_bg.png">
+			</div>
+			<div id="p8_l_p1">
+				<img src="img/p8_l_p1.png">
+			</div>
+			<div id="p8_l_p2">
+				<img src="img/p8_l_p2.png">
+			</div>
+			<div id="p8_l_fish1">
+				<img src="img/p8_l_fish.png">
+			</div>
+			<div id="p8_l_fish2">
+				<img src="img/p8_l_fish.png">
+			</div>
+			<div id="p8_l_fish3">
+				<img src="img/p8_l_fish.png">
+			</div>
+			<div id="p8_l_fish4">
+				<img src="img/p8_l_fish.png">
+			</div>
+			<div id="p8_l_fish5">
+				<img src="img/p8_l_fish.png">
+			</div>
+			<div id="p8_l_p3">
+				<img src="img/p8_l_p3.png">
+			</div>
+			<div id="p8_l_t">
+				<img src="img/p8_l_t.png">
+			</div>
+			<div id="p8_l_bg">
+				<img src="img/p8_l_bg.png">
+			</div>
+			<div id="p8_l_man">
+				<img src="img/p8_l_man.png">
+			</div>
+		</div>
+		<div id="p8_text1">
+			<img src="img/p4_text1.png">
+		</div>
+		<div id="p8_text2">
+			<img src="img/p8_text2.png">
+		</div>
+		<div id="p8_prev">
+			<img src="img/prev.png">
+		</div>
+		<div id="p8_next">
+			<img src="img/next.png">
+		</div>
+		<div id="p8_random">
+			<img src="img/random.png">
+		</div>
+	</div>
+<script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
+<script type="text/javascript">
+$(function(){
+	var onOff = false;
+
+	var imgdefereds=[];
+	$('img').each(function(){
+	 var dfd=$.Deferred();
+	 $(this).bind('load',function(){
+	 dfd.resolve();
+	 }).bind('error',function(){
+	 //图片加载错误，加入错误处理
+	 // dfd.resolve();
+	 })
+	 if(this.complete) setTimeout(function(){
+	 dfd.resolve();
+	 },100);
+	 imgdefereds.push(dfd);
+	})
+	$.when.apply(null,imgdefereds).done(function(){
+	  var css = '<link rel="stylesheet" href="css/style.css" type="text/css" />'
+	  $('head')[0].innerHTML += css;
+	  setTimeout(function(){
+		  $('#p8_bg').hide()
+		  $('#p8').show()
+	  },200)
+	});
+
+
+	function is_weixin(){
+		var ua = navigator.userAgent.toLowerCase();
+		if(ua.match(/MicroMessenger/i)=="micromessenger") {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	if (is_weixin()) {
+		$("body").on("touchmove", touchMoveHide)
+		 function touchMoveHide(event){
+				event.preventDefault();
+		 };
+	}
+
+	$('#p8_back').on('click',function(){
+		window.location.replace('page3.html')
+	})
+	$('#p8_prev').on('click',function() {
+		window.location.href='page8.html'
+	})
+	$('#p8_next').on('click',function() {
+		window.location.href='page10.html'
+	})
+	$('#p8_random').on('click',function () {
+		if (!onOff) {
+			$('#p8_text2').fadeOut('slow',function () {
+				$('#p8_text2').children('img').attr('style','width:70%;margin-left:15%')
+				$('#p8_text2')[0].children[0].src='img/p8_text3.png';
+			})
+			$('#p8_first').removeClass().addClass("ro1");
+			$('#p8_last').removeClass().addClass("ro2")
+		}else {
+			$('#p8_text2').fadeOut('slow',function () {
+				$('#p8_text2').children('img').removeAttr('style')
+				$('#p8_text2')[0].children[0].src='img/p8_text2.png';
+			})
+
+			$('#p8_first')[0].style.opacity = 0;
+			$('#p8_first').removeClass().addClass("ro2")
+			$('#p8_last').removeClass().addClass("ro1")
+		}
+		$('#p8_text2').fadeIn('slow')
+		onOff = !onOff;
+	})
+})
+</script>
+</body>
+</html>

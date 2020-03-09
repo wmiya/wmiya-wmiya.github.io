@@ -1,0 +1,142 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	font: 16px/1.8 "microsoft yahei",verdana;
+}
+.section{
+	position: relative;
+	background-color: #fff;
+	overflow: hidden;
+	text-align: center;
+
+}
+.section1{
+	background:url("../img/hero_sunset_large_2x.jpg") no-repeat center;
+	background-size: cover;/*保持图形原本的宽高等比*/
+
+}
+.section1 h1{
+	margin-top: 5%;
+	color: #FFFFFF;
+	font-size: 50px;
+	font-weight: normal;
+	opacity: .8;
+}
+.section1 p{
+	margin: 800px auto 0;
+	color: #FFFFFF;
+	font-size: 18px;
+	width: 60%;
+	opacity: .6;
+}
+.section1 a{
+	display: block;
+	margin: 5% auto 0;
+	color: #ff9000;
+	font-size: 18px;
+	opacity: .9;
+}
+/*page2*/
+.section2{
+	background: #f2f2f2 url("../img/technology_hero_large_2x.jpg") no-repeat bottom;
+    background-size: 100%;
+}
+.section2 h1{
+	margin: 20px auto;
+	color: #333;
+	font-size: 50px;
+	font-weight: normal;
+}
+.section2 a{
+	display: block;
+	margin: 20% auto 0;
+	color: #08c;
+	font-size: 18px;
+}
+/*page3*/
+.section3{
+	background: url("../img/timekeeping_hero_large_2x.jpg") no-repeat center 300px;
+    background-size: 50%;
+}
+.section3 h1{
+	margin: 20px auto 20px -1500px;
+	color: #333;
+	font-size: 40px;
+	font-weight: normal;
+	width: 60%;
+
+}
+.section3 p{
+	margin: 20px auto 20px 1500px;
+	color: #333;
+	font-size: 18px;
+	width: 60%;
+}
+.section3 a{
+	display: block;
+	margin: 20px auto 0;
+	color: #0088CC;
+	font-size: 18px;
+
+}
+/*page 4*/
+.section4 h1{
+	margin: 20px auto;
+	color: #333333;
+	font-size: 40px;
+	font-weight: normal;
+
+}
+.section4 .row{
+	width: 95%;
+	display: flex;/*弹性布局*/
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	color: #333333;
+	font-size: 16px;
+}
+.section4 .column{
+	margin: 10px;
+	padding-bottom: 30px;
+	background-color: #F2F2F2;
+}
+.section4 .column img{
+	height: 300px;
+	margin-top: 30px;
+}
+.section4 .column  h4{
+	margin: 20px auto;
+}
+.section4 .column  h4.primary{
+	background-image: url("../img/logo_collection_primary.svg");
+	background-size: 102px 22px;
+	width: 102px;
+	height: 22px;
+
+}
+.section4 .column  h4.sport{
+	background-image:url("../img/logo_collection_sport.svg");
+	background-size: 178px 22px;
+	width: 178px;
+	height: 22px;
+
+}
+.section4 .column  h4.edition{
+	background-image: url("../img/logo_collection_edition.svg");
+	background-size: 190px 22px;
+	width: 190px;
+	height: 22px;
+
+}
+.section4 .column p{
+	width: 90%;
+	margin: 10px auto;
+}
+.section4 .column a{
+	display: block;
+	margin: 10px auto 0;
+	color: #08c;
+}

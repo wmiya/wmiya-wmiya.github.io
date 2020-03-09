@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	(function(){
+		var w = window.screen.width;
+			var targetW = 640;
+			var scale = w/targetW;
+			var meta = document.createElement("meta");
+			meta.name = "viewport";
+			meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+			document.head.appendChild(meta);
+	})()
+	</script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		img {
+			vertical-align: top;
+			width: 100%;
+			height: 100%;
+		}
+		#p12 {
+			display: none;
+		}
+		#p12_bg {
+			position: relative;
+			width: 640px;
+			height: 1040px;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div id="p12_bg">
+		<img src="img/p2_bg.png" alt="">
+	</div>
+	<div id="p12">
+		<div id="p12_back">
+			<img src="img/p3_back.png">
+		</div>
+		<div id="p12_pic1">
+			<img src="img/p12_pic1.png">
+		</div>
+		<div id="p12_pic2">
+			<img src="img/p12_pic2.png">
+		</div>
+		<div id="p12_pic3">
+			<img src="img/p12_pic3.png">
+		</div>
+		<div id="p12_pic4">
+			<img src="img/p12_pic4.png">
+		</div>
+		<div id="p12_pic5">
+			<img src="img/p12_pic5.png">
+		</div>
+		<div id="p12_pic6">
+			<img src="img/p12_pic6.png">
+		</div>
+		<div id="p12_pic7">
+			<img src="img/p12_pic7.png">
+		</div>
+		<div id="p12_pic8">
+			<img src="img/p12_pic8.png">
+		</div>
+		<div id="p12_pic9">
+			<img src="img/p12_pic9.png">
+		</div>
+		<div id="p12_pic10">
+			<img src="img/p12_pic10.png">
+		</div>
+		<div id="p12_pic11">
+			<img src="img/p12_pic11.png">
+		</div>
+		<div id="p12_pic12">
+			<img src="img/p12_pic12.png">
+		</div>
+		<div id="p12_pic13">
+			<img src="img/p12_pic13.png">
+		</div>
+		<div id="p12_pic14">
+			<img src="img/p12_pic14.png">
+		</div>
+		<div id="p12_pic15">
+			<img src="img/p12_pic15.png">
+		</div>
+		<div id="p12_pic16">
+			<img src="img/p12_pic16.png">
+		</div>
+		<div id="p12_pic17">
+			<img src="img/p12_pic17.png">
+		</div>
+		<div id="p12_pic18">
+			<img src="img/p12_pic18.png">
+		</div>
+		<div id="p12_pic19">
+			<img src="img/p12_pic19.png">
+		</div>
+		<div id="p12_man">
+			<img src="img/p12_man.png">
+		</div>
+		<div id="p12_text1">
+			<img src="img/p12_text1.png">
+		</div>
+		<div id="p12_text2">
+			<img src="img/p12_text2.png">
+		</div>
+		<div id="p12_text3">
+			<img src="img/p12_text3.png">
+		</div>
+		<div id="p12_text4">
+			<img src="img/p12_text4.png">
+		</div>
+		<div id="p12_text5">
+			<img src="img/p12_text5.png">
+		</div>
+		<div id="box1">
+			<div class="box">
+				<img src="img/box.png">
+			</div>
+			<div id="box1_t1">
+				<img src="img/box1_t1.png">
+			</div>
+			<div id="box1_t2">
+				<img src="img/box1_t2.png">
+			</div>
+			<div class="box_t3">
+				<img src="img/box_t3.png">
+			</div>
+			<div id="box1_t4">
+				<img src="img/box1_t4.png">
+			</div>
+			<div class="box_t5">
+				<img src="img/box_t5.png">
+			</div>
+			<div class="prev">
+				<img src="img/box_prev.png">
+			</div>
+			<div class="next">
+				<img src="img/box_next.png">
+			</div>
+			<div class="close">
+				<img src="img/box_close.png">
+			</div>
+		</div>
+		<div id="box2">
+			<div class="box">
+				<img src="img/box.png">
+			</div>
+			<div id="box2_t1">
+				<img src="img/box2_t1.png">
+			</div>
+			<div id="box2_t2">
+				<img src="img/box2_t2.png">
+			</div>
+			<div class="box_t3">
+				<img src="img/box_t3.png">
+			</div>
+			<div id="box2_t4">
+				<img src="img/box2_t4.png">
+			</div>
+			<div class="box_t5">
+				<img src="img/box_t5.png">
+			</div>
+			<div class="prev">
+				<img src="img/box_prev.png">
+			</div>
+			<div class="next">
+				<img src="img/box_next.png">
+			</div>
+			<div class="close">
+				<img src="img/box_close.png">
+			</div>
+		</div>
+		<div id="box3">
+			<div class="box">
+				<img src="img/box.png">
+			</div>
+			<div id="box3_t1">
+				<img src="img/box3_t1.png">
+			</div>
+			<div id="box3_t2">
+				<img src="img/box3_t2.png">
+			</div>
+			<div class="box_t3">
+				<img src="img/box_t3.png">
+			</div>
+			<div id="box3_t4">
+				<img src="img/box3_t4.png">
+			</div>
+			<div class="box_t5">
+				<img src="img/box_t5.png">
+			</div>
+			<div class="prev">
+				<img src="img/box_prev.png">
+			</div>
+			<div class="next">
+				<img src="img/box_next.png">
+			</div>
+			<div class="close">
+				<img src="img/box_close.png">
+			</div>
+		</div>
+		<div id="box4">
+			<div class="box">
+				<img src="img/box.png">
+			</div>
+			<div id="box4_t1">
+				<img src="img/box4_t1.jpg">
+			</div>
+			<div id="box4_t2">
+				<img src="img/box4_t2.png">
+			</div>
+			<div class="box_t3">
+				<img src="img/box_t3.png">
+			</div>
+			<div id="box4_t4">
+				<img src="img/box4_t4.png">
+			</div>
+			<div class="box_t5">
+				<img src="img/box_t5.png">
+			</div>
+			<div class="prev">
+				<img src="img/box_prev.png">
+			</div>
+			<div class="next">
+				<img src="img/box_next.png">
+			</div>
+			<div class="close">
+				<img src="img/box_close.png">
+			</div>
+		</div>
+		<div id="box5">
+			<div class="box">
+				<img src="img/box.png">
+			</div>
+			<div id="box5_t1">
+				<img src="img/box5_t1.png">
+			</div>
+			<div id="box5_t2">
+				<img src="img/box5_t2.png">
+			</div>
+			<div class="box_t3">
+				<img src="img/box_t3.png">
+			</div>
+			<div id="box5_t4">
+				<img src="img/box5_t4.png">
+			</div>
+			<div class="box_t5">
+				<img src="img/box_t5.png">
+			</div>
+			<div class="prev">
+				<img src="img/box_prev.png">
+			</div>
+			<div class="next">
+				<img src="img/box_next.png">
+			</div>
+			<div class="close">
+				<img src="img/box_close.png">
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
+<script type="text/javascript">
+$(function(){
+	var imgdefereds=[];
+	$('img').each(function(){
+	 var dfd=$.Deferred();
+	 $(this).bind('load',function(){
+	 dfd.resolve();
+	 }).bind('error',function(){
+	 //图片加载错误，加入错误处理
+	 // dfd.resolve();
+	 })
+	 if(this.complete) setTimeout(function(){
+	 dfd.resolve();
+	 },100);
+	 imgdefereds.push(dfd);
+	})
+	$.when.apply(null,imgdefereds).done(function(){
+		var css = '<link rel="stylesheet" href="css/style.css" type="text/css" />'
+		$('head')[0].innerHTML += css;
+		setTimeout(function(){
+			$('#p12_bg').hide()
+			$('#p12').show()
+		},200)
+	});
+
+	var onOff = false;
+
+	function is_weixin(){
+		var ua = navigator.userAgent.toLowerCase();
+		if(ua.match(/MicroMessenger/i)=="micromessenger") {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	if (is_weixin()) {
+		$("body").on("touchmove", touchMoveHide)
+		 function touchMoveHide(event){
+				event.preventDefault();
+		 };
+	}
+
+	$('#p12_back').on('click',function(){
+		window.location.replace('page3.html')
+	})
+	$('#p12').on('click',function(ev){
+		if ($(ev.target).parent().attr('id')) {
+			if ($(ev.target).parent().attr('id').indexOf('p12_text')!='-1') {
+				boxShow(ev)
+			}
+
+		}
+	})
+	$('.close').on('click',function(ev){
+		$(this).parent().hide()
+		$(this).parent().children().removeAttr('style')
+	})
+	$('.prev').on('click',function(ev){
+		var num = $(this).parent().attr('id').substring(($(this).parent().attr('id').length)-1);
+		var prev = parseInt(num) - 1 ;
+		if (prev<1) {
+			prev = 5
+		}
+		$(this).parent().hide()
+		$(this).parent().children().removeAttr('style')
+		boxShow(ev,prev)
+	})
+	$('.next').on('click',function(ev){
+		var num = $(this).parent().attr('id').substring(($(this).parent().attr('id').length)-1);
+		var next = parseInt(num) + 1;
+		if (next >5) {
+			next = 1;
+		}
+		$(this).parent().hide()
+		$(this).parent().children().removeAttr('style')
+		boxShow(ev,next)
+	})
+	function boxShow(ev,num) {
+		num = num || $(ev.target).parent().attr('id').substring(($(ev.target).parent().attr('id').length)-1);
+		$('#box'+num+'').show()
+		$('#box'+num+'').children().eq(0).attr('style','animation: box .5s ease-out;')
+		$('#box'+num+'').children().eq(1).attr('style','animation: box_t1 1s .5s ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;')
+		$('#box'+num+'').children().eq(5).attr('style','animation: box_t1 1s .5s ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;')
+		$('#box'+num+'').children().eq(2).attr('style','animation: box_t2 1s .5s ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;')
+		$('#box'+num+'').children().eq(3).attr('style','animation: box_t3 1s .5s ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;')
+		$('#box'+num+'').children().eq(4).attr('style','animation: box_t4 1s .5s ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;')
+		$('#box'+num+'').children('.close').attr('style','animation: box_close 1s .5s  ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;')
+		$('#box'+num+'').children('.prev').attr('style','animation: box_prev 1.5s .5s  ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;')
+		$('#box'+num+'').children('.next').attr('style','animation: box_next 1.5s .5s  ease-out;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;')
+	}
+})
+</script>
+</body>
+</html>

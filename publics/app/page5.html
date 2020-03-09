@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	(function(){
+		var w = window.screen.width;
+			var targetW = 640;
+			var scale = w/targetW;
+			var meta = document.createElement("meta");
+			meta.name = "viewport";
+			meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+			document.head.appendChild(meta);
+	})()
+	</script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		img {
+		    vertical-align: top;
+		    width: 100%;
+		    height: 100%;
+		}
+		#p5 {
+			display: none;
+		}
+		#p5_bg {
+			position: relative;
+			width: 640px;
+			height: 1040px;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div id="p5_bg">
+		<img src="img/p4_bg.png" alt="">
+	</div>
+	<div id="p5">
+		<div id="p5_back">
+			<img src="img/p3_back.png">
+		</div>
+		<div id="p5_first">
+			<div id="p5_cont_bg">
+				<img src="img/p5_cont_bg.png">
+			</div>
+			<div id="p5_code">
+				<img src="img/p5_code1.png">
+			</div>
+			<div id="p5_text1">
+				<img src="img/p5_text1.png">
+			</div>
+			<div id="p5_man">
+				<img src="img/p5_man.png">
+			</div>
+			<div id="p5_man_l">
+				<img src="img/p5_man_l.png">
+			</div>
+			<div id="p5_man_r">
+				<img src="img/p5_man_r.png">
+			</div>
+			<div id="p5_key">
+				<img src="img/p5_key.png">
+			</div>
+			<div id="p5_computer">
+				<img src="img/p5_computer.png">
+			</div>
+		</div>
+		<div id="p5_last">
+			<div id="p5_cont_bg">
+				<img src="img/p4_cont_bg.png">
+			</div>
+			<div id="p5_l_man">
+				<img src="img/p5_l_man.png">
+			</div>
+		</div>
+		<div id="p5_text1">
+			<img src="img/p4_text1.png">
+		</div>
+		<div id="p5_text2">
+			<img src="img/p5_text1.png">
+		</div>
+		<div id="p5_prev">
+			<img src="img/prev.png">
+		</div>
+		<div id="p5_next">
+			<img src="img/next.png">
+		</div>
+		<div id="p5_random">
+			<img src="img/random.png">
+		</div>
+	</div>
+<script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
+<script type="text/javascript">
+	$(function(){
+		var imgdefereds=[];
+		$('img').each(function(){
+		 var dfd=$.Deferred();
+		 $(this).bind('load',function(){
+		 dfd.resolve();
+		 }).bind('error',function(){
+		 //图片加载错误，加入错误处理
+		 // dfd.resolve();
+		 })
+		 if(this.complete) setTimeout(function(){
+		 dfd.resolve();
+		 },100);
+		 imgdefereds.push(dfd);
+		})
+		$.when.apply(null,imgdefereds).done(function(){
+			var css = '<link rel="stylesheet" href="css/style.css" type="text/css" />'
+			$('head')[0].innerHTML += css;
+			setTimeout(function(){
+				$('#p5_bg').hide()
+				$('#p5').show()
+			},200)
+		});
+
+		var onOff = false;
+
+		function is_weixin(){
+			var ua = navigator.userAgent.toLowerCase();
+			if(ua.match(/MicroMessenger/i)=="micromessenger") {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		if (is_weixin()) {
+			$("body").on("touchmove", touchMoveHide)
+			 function touchMoveHide(event){
+					event.preventDefault();
+			 };
+		}
+
+		$('#p5_back').on('click',function(){
+			window.location.replace('page3.html')
+		})
+		$('#p5_prev').on('click',function() {
+			window.location.href='page4.html'
+		})
+		$('#p5_next').on('click',function() {
+			window.location.href='page7.html'
+		})
+		$('#p5_random').on('click',function () {
+			if (!onOff) {
+				$('#p5_text2').fadeOut('slow',function () {
+					$('#p5_text2')[0].children[0].src='img/p5_text2.png';
+				})
+				$('#p5_first').removeClass().addClass("ro1");
+				$('#p5_last').removeClass().addClass("ro2")
+			}else {
+				$('#p5_text2').fadeOut('slow',function () {
+					$('#p5_text2')[0].children[0].src='img/p5_text1.png';
+				})
+				$('#p5_first')[0].style.opacity = 0;
+				$('#p5_first').removeClass().addClass("ro2")
+				$('#p5_last').removeClass().addClass("ro1")
+			}
+			$('#p5_text2').fadeIn('slow')
+			onOff = !onOff;
+		})
+	})
+</script>
+</body>
+</html>

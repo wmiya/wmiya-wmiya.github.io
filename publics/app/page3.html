@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	(function(){
+		var w = window.screen.width;
+			var targetW = 640;
+			var scale = w/targetW;
+			var meta = document.createElement("meta");
+			meta.name = "viewport";
+			meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+			document.head.appendChild(meta);
+	})()
+	</script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		img {
+		    vertical-align: top;
+		    width: 100%;
+		    height: 100%;
+		}
+		#p3 {
+			display: none;
+		}
+		#p3_bg {
+			position: relative;
+		    width: 640px;
+		    height: 1040px;
+		    overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div id="p3_bg">
+		<img src="img/p2_bg.png" alt="">
+	</div>
+	<div id="p3">
+		<div id="p3_back">
+			<img src="img/p3_back.png">
+		</div>
+		<div id="p3_men1">
+			<img src="img/p3_men1.png">
+		</div>
+		<div id="p3_men2">
+			<img src="img/p3_men2.png">
+		</div>
+		<div id="p3_men3">
+			<img src="img/p3_men3.png">
+		</div>
+		<div id="p3_men4">
+			<img src="img/p3_men4.png">
+		</div>
+		<div id="p3_men5">
+			<img src="img/p3_men5.png">
+		</div>
+		<div id="p3_men6">
+			<img src="img/p3_men6.png">
+		</div>
+		<div id="p3_car">
+			<img src="img/p3_car.png">
+		</div>
+		<div id="p3_men7">
+			<img src="img/p3_men7.png">
+		</div>
+		<div id="p3_men8">
+			<img src="img/p3_men8.png">
+		</div>
+		<div id="p3_men9">
+			<img src="img/p3_men9.png">
+		</div>
+		<div id="p3_logo">
+			<img src="img/p3_logo.png">
+		</div>
+		<div id="p3_cat">
+			<img src="img/p3_cat.png">
+		</div>
+		<div id="p3_text1">
+			<img src="img/p3_text1.png">
+		</div>
+		<div id="p3_text2">
+			<img src="img/p3_text2.png">
+		</div>
+		<div id="p3_cloud1">
+			<img src="img/p3_cloud1.png">
+		</div>
+		<div id="p3_cloud2">
+			<img src="img/p3_cloud2.png">
+		</div>
+		<div id="p3_cloud3">
+			<img src="img/p3_cloud3.png">
+		</div>
+		<div id="p3_hand">
+			<img src="img/p3_hand.png">
+		</div>
+		<div id="p3_who">
+			<img src="img/p3_who.png">
+		</div>
+	</div>
+<script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
+<script type="text/javascript">
+	var imgdefereds=[];
+	$('img').each(function(){
+	 var dfd=$.Deferred();
+	 $(this).bind('load',function(){
+	 dfd.resolve();
+	 }).bind('error',function(){
+	 //图片加载错误，加入错误处理
+	 // dfd.resolve();
+	 })
+	 if(this.complete) setTimeout(function(){
+	 dfd.resolve();
+	 },100);
+	 imgdefereds.push(dfd);
+	})
+	$.when.apply(null,imgdefereds).done(function(){
+		var css = '<link rel="stylesheet" href="css/style.css" type="text/css" />'
+		$('head')[0].innerHTML += css;
+		setTimeout(function(){
+			$('#p3_bg').hide()
+			$('#p3').show()
+		},200)
+	});
+
+	function is_weixin(){
+		var ua = navigator.userAgent.toLowerCase();
+		if(ua.match(/MicroMessenger/i)=="micromessenger") {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	if (is_weixin()) {
+		$("body").on("touchmove", touchMoveHide)
+		 function touchMoveHide(event){
+				event.preventDefault();
+		 };
+	}
+
+	$('#p3_back').on('click',function(){
+		window.location.replace('page2.html')
+	})
+	$('#p3').on('click',function(ev){
+		console.log($(ev.target).parent().attr('id'))
+		if ($(ev.target).parent().attr('id').indexOf('p3_men')!='-1') {
+			var num = $(ev.target).parent().attr('id');
+			window.location.href = 'page'+(parseInt(num.substr(num.length-1,1))+3)+'.html'
+		}
+	})
+</script>
+</body>
+</html>

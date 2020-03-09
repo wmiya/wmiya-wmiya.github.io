@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	(function(){
+		var w = window.screen.width;
+			var targetW = 640;
+			var scale = w/targetW;
+			var meta = document.createElement("meta");
+			meta.name = "viewport";
+			meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+			document.head.appendChild(meta);
+	})()
+	</script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		img {
+			vertical-align: top;
+			width: 100%;
+			height: 100%;
+		}
+		#p6{
+			display: none;
+		}
+		#p6_bg {
+			position: relative;
+			width: 640px;
+			height: 1040px;
+		}
+	</style>
+</head>
+<body>
+	<div id="p6_bg">
+		<img src="img/p4_bg.png" alt="">
+	</div>
+	<div id="p6">
+		<div id="p6_back">
+			<img src="img/p3_back.png">
+		</div>
+		<div id="p6_first">
+			<div id="p6_cont_bg">
+				<img src="img/p4_cont_bg.png">
+			</div>
+			<div id="p6_pic1">
+				<img src="img/p6_pic1.png">
+			</div>
+			<div id="p6_pic2">
+				<img src="img/p6_pic2.png">
+			</div>
+			<div id="p6_pic3">
+				<img src="img/p6_pic3.png">
+			</div>
+			<div id="p6_man">
+				<img src="img/p6_man.png">
+			</div>
+		</div>
+		<div id="p6_last">
+			<div id="p6_cont_bg">
+				<img src="img/p4_cont_bg.png">
+			</div>
+			<div id="p6_l_bg">
+				<img src="img/p6_l_bg.png">
+			</div>
+			<div id="p6_l_man">
+				<img src="img/p6_l_man.png">
+			</div>
+			<div id="p6_l_t1" class="p6_t">
+				<img src="img/p6_l_t1.png">
+			</div>
+			<div id="p6_l_t2" class="p6_t">
+				<img src="img/p6_l_t2.png">
+			</div>
+			<div id="p6_l_t3" class="p6_t">
+				<img src="img/p6_l_t3.png">
+			</div>
+			<div id="p6_l_t4" class="p6_t">
+				<img src="img/p6_l_t4.png">
+			</div>
+			<div id="p6_l_t5" class="p6_t">
+				<img src="img/p6_l_t5.png">
+			</div>
+			<div id="p6_l_t6" class="p6_t">
+				<img src="img/p6_l_t6.png">
+			</div>
+			<div id="p6_l_t7" class="p6_t">
+				<img src="img/p6_l_t7.png">
+			</div>
+		</div>
+		<div id="p6_text1">
+			<img src="img/p4_text1.png">
+		</div>
+		<div id="p6_text2">
+			<img src="img/p6_text1.png">
+		</div>
+		<div id="p6_prev">
+			<img src="img/prev.png">
+		</div>
+		<div id="p6_next">
+			<img src="img/next.png">
+		</div>
+		<div id="p6_random">
+			<img src="img/random.png">
+		</div>
+	</div>
+<script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
+<script type="text/javascript">
+$(function(){
+	$(function(){
+		var timer1 = 0;
+		var timer2 = 0;
+		var onOff = false;
+
+		var imgdefereds=[];
+		$('img').each(function(){
+		 var dfd=$.Deferred();
+		 $(this).bind('load',function(){
+		 dfd.resolve();
+		 }).bind('error',function(){
+		 //图片加载错误，加入错误处理
+		 // dfd.resolve();
+		 })
+		 if(this.complete) setTimeout(function(){
+		 dfd.resolve();
+		 },100);
+		 imgdefereds.push(dfd);
+		})
+		$.when.apply(null,imgdefereds).done(function(){
+		  var css = '<link rel="stylesheet" href="css/style.css" type="text/css" />'
+		  $('head')[0].innerHTML += css;
+		  setTimeout(function(){
+			  $('#p6_bg').hide()
+			  $('#p6').show()
+		  },200)
+		});
+
+
+		function is_weixin(){
+			var ua = navigator.userAgent.toLowerCase();
+			if(ua.match(/MicroMessenger/i)=="micromessenger") {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		if (is_weixin()) {
+			$("body").on("touchmove", touchMoveHide)
+			 function touchMoveHide(event){
+					event.preventDefault();
+			 };
+		}
+
+		$('#p6_back').on('click',function(){
+			window.location.replace('page3.html')
+		})
+		$('#p6_prev').on('click',function() {
+			window.location.href='page5.html'
+		})
+		$('#p6_next').on('click',function() {
+			window.location.href='page8.html'
+		})
+		$('#p6_random').on('click',function () {
+			clearInterval(timer1)
+			clearInterval(timer2)
+			for (var i = 0; i < $('.p6_t').length; i++) {
+				$('.p6_t').eq(i).removeAttr('style')
+			}
+			if (!onOff) {
+				timer1 = setInterval(function() {
+					for (var i = 0; i < $('.p6_t').length; i++) {
+
+						$('.p6_t').eq(i).attr('style','animation: p6_l_t1 1.25s '+i*.25+'s ease-in-out')
+					}
+				},2600)
+				timer2 = setInterval(function() {
+					for (var i = 0; i < $('.p6_t').length; i++) {
+						$('.p6_t').eq(i).removeAttr('style')
+					}
+				},5200)
+				$('#p6_text2').fadeOut('slow',function () {
+					$('#p6_text2')[0].children[0].src='img/p6_text2.png';
+				})
+				$('#p6_first').removeClass().addClass("ro1");
+				$('#p6_last').removeClass().addClass("ro2")
+			}else {
+				$('#p6_text2').fadeOut('slow',function () {
+					$('#p6_text2')[0].children[0].src='img/p6_text1.png';
+				})
+				$('#p6_first')[0].style.opacity = 0;
+				$('#p6_first').removeClass().addClass("ro2")
+				$('#p6_last').removeClass().addClass("ro1")
+			}
+			$('#p6_text2').fadeIn('slow')
+			onOff = !onOff;
+		})
+	})
+})
+</script>
+</body>
+</html>

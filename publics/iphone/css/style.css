@@ -1,0 +1,360 @@
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+article,
+del,
+em,
+img,
+i,
+nav,
+aside,
+canvas,
+footer,
+header,
+menu,
+section,
+ul,
+li {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: Arial, 'Microsoft YaHei';
+  color: #666;
+  background-color: #2d4082;
+  overflow: hidden;
+  position: relative;
+}
+.shake {
+	animation: shake 0.4s;
+	-webkit-animation: shake 0.4s;
+	animation-iteration-count: infinite;/*无限次循环播放*/
+	-webkit-animation-iteration-count: infinite;
+}
+
+
+.bg {
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: rgba(255, 0, 0, 0.3);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	animation: bg 1s;
+	-webkit-animation: bg 1s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+	border: 0;
+}
+em,
+i,
+dfn {
+	font-style: normal;
+}
+button {
+	cursor: pointer;
+	transition: 0.5s;
+}
+button:focus {
+	border: none;
+	outline: none;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+a:focus {
+	outline: none;
+}
+
+.clear {
+	zoom: 1;
+}
+.clear:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+/*////////////////////////////背景颜色/////////////////////////////*/
+.bg-welcome {
+	background-color: #2d4081;
+}
+.bg-page2 {
+	background-color: #5f4ac3;
+}
+
+.bg-page3 {
+	background-color: #243367;
+}
+
+.bg-page4 {
+	background-color: #243367;
+}
+
+
+.gameTop {
+	width: 100%;
+	height: 70px;
+	background: rgba(22, 31, 62, 0.7);
+	position: absolute;
+	bottom: 0px;
+	z-index: 9;
+}
+.score {
+	width: 263px;
+	height: 100%;
+	float: left;
+	background: url(../img/monster4.png) no-repeat;
+	background-size: 60px 52px;
+	background-position: 22px 16px;
+	text-indent: 88px;
+	color: #55b9f8;
+	line-height: 70px;
+	font-size: 30px;
+}
+
+.time {
+	width: 150px;
+	float: left;
+	background: url(../img/time.png) no-repeat left center;
+	text-indent: 57px;
+	line-height: 70px;
+	font-size: 30px;
+	color: #ffe400;
+}
+.music {
+	width: 50px;
+	height: 47px;
+	background: url(../img/run.png) no-repeat;
+	float: right;
+	margin: 12px 20px 0px 0px;
+	animation: round 5s;
+	-webkit-animation: round 5s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+.musicStop {
+	width: 50px;
+	height: 47px;
+	background: url(../img/stop.png) no-repeat;
+	float: right;
+	margin: 12px 20px 0px 0px;
+}
+.pageGame {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.pageGame span {
+	width: 100px;
+	height: 100px;
+	display: block;
+	position: absolute;
+	line-height: 50px;
+	text-align: center;
+	-webkit-transform: translate3d(0, 0, 0) translatex(-100px) translatey(-100px);
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+}
+.pageGame span.run {
+	z-index: 5;
+}
+.pageGame span.stop {
+	z-index: 1;
+}
+
+.pageGame .monster1.run {
+	width: 109px;
+	height: 114px;
+	background: url(../img/monster1.png)) no-repeat;
+}
+.pageGame .monster1.stop {
+	width: 180px;
+	height: 138px;
+	background: url(../img/monster11.png) no-repeat;
+}
+.pageGame .monster2.run {
+	width: 109px;
+	height: 113px;
+	background: url(../img/monster2.png) no-repeat;
+}
+.pageGame .monster2.stop {
+	width: 146px;
+	height: 84px;
+	background: url(../img/monster12.png) no-repeat;
+}
+
+.pageGame .monster3.run {
+	width: 107px;
+	height: 129px;
+	background: url(../img/monster3.png) no-repeat;
+}
+.pageGame .monster3.stop {
+	width: 103px;
+	height: 94px;
+	background: url(../img/monster13.png) no-repeat;
+}
+.pageGame .monster4.run {
+	width: 125px;
+	height: 110px;
+	background: url(../img/monster4.png) no-repeat;
+}
+.pageGame .monster4.stop {
+	width: 92px;
+	height: 107px;
+	background: url(../img/monster14.png) no-repeat;
+}
+
+.scrollBg {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 8;
+	-webkit-transition: 0.5s;
+}
+
+.alert {
+	width: 424px;
+	height: 489px;
+	background: url(../img/alert.png) no-repeat;
+	position: absolute;
+	top: 45%;
+	margin-top: -245px;
+	left: 50%;
+	margin-left: -212px;
+	z-index: 8;
+}
+
+.alert span {
+	width: 400px;
+	height: 60px;
+	line-height: 34px;
+	display: block;
+	position: absolute;
+	top: 240px;
+	left: 12px;
+	text-align: center;
+	color: #FFF;
+	font-size: 30px;
+}
+
+
+
+
+
+
+
+section{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+
+}
+section .circle-welcome{
+		width: 429px;
+		height: 429px;
+		background-color:#233264 ;
+		border: 1px dotted #000;
+		position: absolute;
+		left: 105px;
+		top: 30%;
+		box-shadow: 0px 0px 0px 115px #26376f,0px 0px 0px 116px #1c2a56,0px 0px 0px 195px #2a3d79,0px 0px 0px 196px #25376f,0px 0px 0px 255px #2c3f7e, 0px 0px 0px 256px #283a75;
+		border-radius: 50%;
+		opacity: 0;
+}
+section  .starSmall{
+		width:100%;
+		height: 100%;
+		background: url(../img/starSmall.png);
+		background-size: cover;
+		position: absolute;
+		top: 0;
+		left: 0px;
+		opacity: 0;
+}
+section  .welcomeMain{
+			height: 370px;
+			position: absolute;
+			top: 29%;
+			left: 143px;
+}
+section .welcomeMain .thanks {
+	width: 400px;
+	height: 300px;
+	position: absolute;
+	top: 72px;
+	z-index: 4;
+	-webkit-transform: translatey(400px);
+}
+
+section .welcomeMain .rocket {
+	width: 164px;
+	height: 193px;
+	position: absolute;
+	top: 20px;
+	left: 10px;
+	-webkit-transform: translatey(400px);
+}
+
+
+section .welcomeMain .miaov {
+	width: 193px;
+	height: 82px;
+	position: absolute;
+	top: 22px;
+	left: 171px;
+	-webkit-transform: translatey(6px) translatex(-10px);
+	opacity: 0;
+}
+section .welcomeMain .widthyou {
+	width: 364px;
+	height: 134px;
+	position: absolute;
+	top: 236px;
+}
+.bg-page1{
+		width: 429px;
+		height: 429px;
+		border: 1px solid #1f2b57;
+		background-color: #233264;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -214px 0 0 -214px;
+		border-radius: 50%;
+		box-shadow: 0px 0px 0px 113px #283972,
+								0px 0px 0px 114px #223161,
+								0px 0px 0px 193px #2a3d79,
+								0px 0px 0px 194px #273971,
+								0px 0px 0px 254px #2c3f7e,
+								0px 0px 0px 255px #2a3c79;
+}
+.bg-star{
+	width: 100%;
+	height: 100%;
+	background: url(../img/star.png) no-repeat;
+	background-size: cover;
+	position: absolute;
+}

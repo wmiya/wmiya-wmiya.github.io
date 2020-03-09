@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	(function(){
+		var w = window.screen.width;
+			var targetW = 640;
+			var scale = w/targetW;
+			var meta = document.createElement("meta");
+			meta.name = "viewport";
+			meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+			document.head.appendChild(meta);
+	})()
+	</script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		img {
+			vertical-align: top;
+			width: 100%;
+			height: 100%;
+		}
+		#p11{
+			display: none;
+		}
+		#p11_bg {
+			position: relative;
+			width: 640px;
+			height: 1040px;
+		}
+	</style>
+</head>
+<body>
+	<div id="p11_bg">
+		<img src="img/p4_bg.png" alt="">
+	</div>
+	<div id="p11">
+		<div id="p11_back">
+			<img src="img/p3_back.png">
+		</div>
+		<div id="p11_first">
+			<div id="p11_cont_bg">
+				<img src="img/p4_cont_bg.png">
+			</div>
+			<div id="p11_pic0">
+				<img src="img/p11_pic0.png">
+			</div>
+			<div id="p11_pic1">
+				<img src="img/p11_pic1.png">
+			</div>
+			<div id="p11_pic2">
+				<img src="img/p11_pic2.png">
+			</div>
+			<div id="p11_pic3">
+				<img src="img/p11_pic3.png">
+			</div>
+			<div id="p11_pic4">
+				<img src="img/p11_pic4.png">
+			</div>
+			<div id="p11_pic5">
+				<img src="img/p11_pic5.png">
+			</div>
+			<div id="p11_man">
+				<img src="img/p11_man.png">
+			</div>
+		</div>
+		<div id="p11_last">
+			<div id="p11_cont_bg">
+				<img src="img/p4_cont_bg.png">
+			</div>
+			<div id="p11_l_bg">
+				<img src="img/p11_l_bg.png">
+			</div>
+			<div id="p11_l_black">
+				<img src="img/p11_l_black.png">
+			</div>
+			<div id="p11_l_star1">
+				<img src="img/p11_l_star1.png">
+			</div>
+			<div id="p11_l_star3">
+				<img src="img/p11_l_star1.png">
+			</div>
+			<div id="p11_l_star4">
+				<img src="img/p11_l_star1.png">
+			</div>
+			<div id="p11_l_star2">
+				<img src="img/p11_l_star2.png">
+			</div>
+			<div id="p11_l_man">
+				<img src="img/p11_l_man.png">
+			</div>
+			<div id="p11_l_man2">
+				<img src="img/p11_l_man2.png">
+			</div>
+			<div id="p11_l_text">
+				<img src="img/p11_l_text.png">
+			</div>
+			<div id="p11_l_text1" class="p11_t">
+				<img src="img/p11_l_text1.png">
+			</div>
+			<div id="p11_l_text2" class="p11_t">
+				<img src="img/p11_l_text2.png">
+			</div>
+			<div id="p11_l_text3" class="p11_t">
+				<img src="img/p11_l_text3.png">
+			</div>
+			<div id="p11_l_text4" class="p11_t">
+				<img src="img/p11_l_text5.png">
+			</div>
+			<div id="p11_l_text5" class="p11_t">
+				<img src="img/p11_l_text4.png">
+			</div>
+			<div id="p11_l_text6" class="p11_t">
+				<img src="img/p11_l_text5.png">
+			</div>
+			<div id="p11_l_text7" class="p11_t">
+				<img src="img/p11_l_text6.png">
+			</div>
+			<div id="p11_l_text8" class="p11_t">
+				<img src="img/p11_l_text7.png">
+			</div>
+			<div id="p11_l_text9" class="p11_t">
+				<img src="img/p11_l_text7.png">
+			</div>
+			<div id="p11_l_text10" class="p11_t">
+				<img src="img/p11_l_text7.png">
+			</div>
+		</div>
+		<div id="p11_text1">
+			<img src="img/p4_text1.png">
+		</div>
+		<div id="p11_text2">
+			<img src="img/p11_text2.png">
+		</div>
+		<div id="p11_prev">
+			<img src="img/prev.png">
+		</div>
+		<div id="p11_next">
+			<img src="img/next.png">
+		</div>
+		<div id="p11_random">
+			<img src="img/random.png">
+		</div>
+	</div>
+<script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
+<script type="text/javascript">
+$(function(){
+	var onOff = false;
+	var imgdefereds=[];
+	$('img').each(function(){
+	 var dfd=$.Deferred();
+	 $(this).bind('load',function(){
+	 dfd.resolve();
+	 }).bind('error',function(){
+	 //图片加载错误，加入错误处理
+	 // dfd.resolve();
+	 })
+	 if(this.complete) setTimeout(function(){
+	 dfd.resolve();
+	 },100);
+	 imgdefereds.push(dfd);
+	})
+	$.when.apply(null,imgdefereds).done(function(){
+	  var css = '<link rel="stylesheet" href="css/style.css" type="text/css" />'
+	  $('head')[0].innerHTML += css;
+	  setTimeout(function(){
+		  $('#p11_bg').hide()
+		  $('#p11').show()
+	  },200)
+	});
+
+	function is_weixin(){
+		var ua = navigator.userAgent.toLowerCase();
+		if(ua.match(/MicroMessenger/i)=="micromessenger") {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	if (is_weixin()) {
+		$("body").on("touchmove", touchMoveHide)
+		 function touchMoveHide(event){
+				event.preventDefault();
+		 };
+	}
+
+	$('#p11_back').on('click',function(){
+		window.location.replace('page3.html')
+	})
+	$('#p11_prev').on('click',function() {
+		window.location.href='page11.html'
+	})
+	$('#p11_next').on('click',function() {
+		window.location.href='page4.html'
+	})
+	$('#p11_random').on('click',function () {
+		for (var i = 0; i < $('.p11_t').length; i++) {
+			$('.p11_t').eq(i).removeAttr('style')
+		}
+		if (!onOff) {
+			$('#p11_text2').fadeOut('slow',function () {
+				$('#p11_text2')[0].children[0].src='img/p11_text3.png';
+			})
+			$('#p11_first').removeClass().addClass("ro1");
+			$('#p11_last').removeClass().addClass("ro2")
+		}else {
+			$('#p11_text2').fadeOut('slow',function () {
+				$('#p11_text2')[0].children[0].src='img/p11_text2.png';
+			})
+			$('#p11_first')[0].style.opacity = 0;
+			$('#p11_first').removeClass().addClass("ro2")
+			$('#p11_last').removeClass().addClass("ro1")
+		}
+		$('#p11_text2').fadeIn('slow')
+		onOff = !onOff;
+	})
+})
+</script>
+</body>
+</html>

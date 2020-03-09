@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="html5shiv.min.js"></script>
+
+	<style>
+	body,
+	h1,
+	h2,
+	h3,
+	p{
+
+		margin:0;
+		font-size: 12px;
+		font-family: arial，微软雅黑;
+		color: #666666;
+	}
+	ul,
+	ol{
+		margin:0;
+		padding:0;
+		list-style: none;
+	}
+	em{
+		font-style: normal;
+	}
+	li {
+		vertical-align: top;
+	}
+	a{
+		text-decoration: none;
+	}
+	img{
+		border:none;
+		vertical-align: top;
+	}
+	.clearfix:after{
+		content: "";
+		clear:both;
+		display: block;
+	}
+	.clearfix{
+		zoom:1;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+
+
+	.header{
+ 		background: url(img/cc.gif) repeat-x;
+	}
+	.warp{
+
+		width:983px;
+		margin:auto;
+		
+	}
+
+	.logo{
+		float:left;
+		margin-top:23px;
+	}
+	.navlist{
+		float:left;
+		margin-left: 16px;
+	}
+	.navlist a{
+		float:left;
+		position: relative;
+		height:71px;
+		margin-left:-2px;
+		z-index: 1;
+
+	}
+	.bagA{
+		/* width: 53px; */
+		float: left;
+		height:71px;
+	}
+	.bagB{
+		float: left;
+		
+		font:14px/66px "微软雅黑";
+		background: url(img/DD.png) no-repeat 0 32px;
+		color:#cccccc;
+		padding:5px 28px 0 18px;
+	}
+	
+	.ydd{
+
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 19px;
+		text-indent: 280px;
+
+		
+	}
+
+	.ydd a{
+			display: inline-block;
+			width: 8px;
+			height: 8px;
+			background: url(img/wexds.png) no-repeat;
+			padding-right: 17px;
+			filter: alpha(opacity="50");
+
+	}
+	.ydd a:hover{
+
+
+		background: url(img/wxcvb.png) no-repeat;
+
+	}
+	.dwleft{
+		position: absolute;
+		top:137px;
+		left:-23px;
+		background: url(img/sjdc.gif) no-repeat  9px 12px;
+		height: 63px;
+		width: 37px;
+
+
+	}
+	.dwright{
+		position: absolute;
+		top:137px;
+		right:-50px;
+		background: url(img/jkks.gif) no-repeat 9px 12px;
+		height: 63px;
+		width: 37px;
+
+	}
+
+	.fond,
+	.fond:hover{
+		height:71px;
+		background:url(img/sxcv.png) repeat-x;
+
+	}
+	.dwleft:hover{
+
+		background: url(img/asfsx.png) no-repeat;
+		filter: alpha(opacity="50");
+	}
+	 .dwright:hover{
+
+		background: url(img/vcvcvcvc.png) no-repeat;
+		filter: alpha(opacity="50");
+	}
+
+	.navlist a:hover{
+		background:url(img/ee.gif) repeat-x;
+		z-index:2;
+		text-decoration: none;
+	}
+
+
+	.navlist a .bagA:hover {
+		background:url(img/ff.gif)  no-repeat;
+		z-index:2;
+	}
+	
+	.navlist a .bagB:hover{
+
+		background:url(img/gg.gif)  no-repeat right top;
+		z-index:2;
+	}
+	.hot{
+		
+		background: url(img/vv.png) no-repeat;
+		height: 17px;
+		width: 26px;
+		position: absolute;
+		top:23px;
+		right:1px;
+
+	}
+	.redtop{
+		background: url(img/uwodmv.png) no-repeat;
+		height: 8px;
+		width: 14px;
+		position: absolute;
+		bottom: 0;
+		left: 40px;
+		overflow: hidden;
+
+
+
+	}
+	.nava{
+		float: left;
+
+	}
+	
+	#hotman a{
+		display: inline-block;
+		padding-right: 14px;
+		line-height: 22px;		
+		background: url(img/vgh.png) no-repeat right 5px;
+		color: #000000;
+	}
+
+	#hotman{
+
+		padding-left: 10px;
+	} 
+	#hotman_1{
+
+	padding-left: 14px;
+
+	}
+	.mayouli:hover{
+	
+		background: #f4f4f4;
+	}
+	#hotman_1 a{
+		
+		
+		font:bold 14px/36px "宋体";	
+		
+		color: #333333;
+		text-decoration: none;
+	}
+
+
+	#hotman_1 p{
+
+		font:12px/24px "宋体";
+	}
+	.form{
+		float: right;
+		margin-right:0;
+		width:271px;
+		background: url(img/jj.png) no-repeat 0 21px;
+		padding:21px 0 18px 0;
+	}
+
+	.cont1{
+		float: left;
+		margin-right:14px; 
+		background: none;
+		border:none;
+
+	}
+	.cont2{
+		float: right;
+		font:11px/25px "宋体";
+		padding-top: 6px;
+		
+	}
+	
+	.cont2 img{
+
+		padding-top: 5px;
+	}	
+		
+	}
+
+	input{
+		margin: 0;
+		border: none;
+		padding: 0;
+		outline: none;
+		background: none;
+		font:11px/29px "宋体";
+		color: #9b9b9b;
+
+	}
+	.submit{
+		border:none;
+		font-size:0;
+		background: none;
+
+	}
+	span{
+		font-size:12px;
+		color:#787878;
+	}
+	.text{
+		background: none;
+		border:none;
+		font:11px/29px "宋体";
+		color: #9b9b9b;
+	}
+	.nav{;
+
+		background: url(img/ss.gif) repeat-x;
+		height:34px;
+	}
+	.ul{
+
+			margin-left: 196px;
+	}
+	.ul li{
+		float: left;
+		
+		position: relative;
+		margin-right: 36px;
+		z-index: 1;
+	}
+	.TJ_left{
+		/* width: 53px; */
+		float: left;
+		height:32px;
+	}
+	.TJ_right{
+		float: left;
+		font:12px/32px "微软雅黑";
+		color:#ffffff;
+		text-decoration: none;
+		padding:0 12px 0 13px;
+	}
+	.ul a:hover{
+
+		background: url(img/wqewewsa.png) repeat-x  7px;
+	}
+	.TJ_left:hover{
+
+		background: url(img/leftrod.png) no-repeat left 6px;
+	}
+	.TJ_right:hover{
+
+		background: url(img/rightrod.png) no-repeat right 6px;
+	}
+	.ul a{
+		float: left;
+		text-decoration: none;
+	}
+
+	.pic{
+		background:#81a69e;
+		height:336px;
+	}
+	.warpA{
+
+		width:982px;
+		margin:auto;
+		position:relative;
+		height:336px;
+	}
+	
+	.warpB{
+		width:982px;
+		margin:auto;
+		border-right:1px solid #d3d3d3;
+		background: #ffffff;
+
+		}
+	.picright{
+		height:336px;
+		background: url(img/jkl.png) no-repeat;
+		position: absolute;
+		top:0;
+		right:-1px;
+		width:254px;
+		}
+	.picright p{
+		position:absolute;
+		bottom:31px;
+		color:#7b8d6a;
+		width:254px;
+		text-align: center;
+		line-height:37px;
+	}	
+	.picright a{
+		position: absolute;
+		bottom:68px;
+		width:215px;
+		height:56px;
+		left:19px;
+
+	}
+	.picright a:hover{
+
+		background: url(img/sdfg.gif) no-repeat;
+
+	}
+	.navTJ{
+
+		padding:16px 20px 0 20px ;
+		width:649px;
+		border-bottom:2px solid #c10d0c;
+	}
+	.title{
+
+		float: left;
+		font:20px/37px "微软雅黑";
+		color:#333354;
+		background: url(img/gh.png) no-repeat 10px 12px;
+		padding-left:34px;
+		text-decoration: none;
+	}
+
+	.navli {
+		float:left;
+	}
+	.navli a{
+		float:left;
+		font:12px/35px "微软雅黑";
+		padding: 2px 13px 0 13px;
+		margin-left: 5px;
+		color:#666666;
+		background: url(img/sd.png) no-repeat right 15px;
+	}
+	.navri{
+		float: right;
+	}
+	.navri a{
+		
+		background:url(img/li.png) no-repeat right 14px;
+		padding: 6px 21px 0 0;
+		font:12px/31px "微软雅黑";
+		color:#666666;
+	}
+	
+	.picliste{
+
+		
+		padding: 20px  3px 0 0;
+		width:729px;
+		
+		overflow: hidden;
+	}
+
+	.ulall{
+		overflow: hidden;
+		margin-right: -39px;
+
+	}
+	.yyli{
+
+		float:left;
+	    padding:0 42px 23px 0 ;
+		width: 140px;
+		height:191px;
+		margin: auto;
+		
+	}
+	.img{
+		
+		height:140px;
+		width:140px;
+		position: relative; 
+	}
+	.img img{
+		width:140px; 
+		height:140px;
+
+	}
+	.img .mask,
+	.img .textt{
+		position: absolute;
+		left:0;
+		bottom: 0;
+		width: 140px;
+	}
+	.img .mask{
+		height: 27px;
+		background: #010219;
+		opacity: .5;
+		filter: alpha(opacity="50")
+	}
+	.img .textt{
+
+		text-indent: 29px;
+		color:#cccc93;
+		line-height: 25px;
+		padding-top: 2px;
+	}
+	.img .icoc{
+
+		position: absolute;
+		bottom: 5px;
+		right: 10px;
+		width: 16px;
+		height: 17px;
+		background: url(img/bn.png) no-repeat;
+	}
+	.img .ioc{
+
+		position: absolute;
+		bottom: 8px;
+		left: 10px;
+		width: 14px;
+		height: 10px;
+		background: url(img/jd.png) no-repeat;
+		overflow: hidden;
+	}
+	.h3A{
+
+		font-weight: normal;
+		font:14px/20px "微软雅黑";
+		padding-top:0;
+		color:#000000;
+	}
+	.new{
+		height:186px;
+		background:#f5f5f5;
+		border:1px solid  #d3d3d3;
+		width:647px;
+		margin: 20px auto;
+		padding-left: 28px;
+		padding-right: 14px;
+	}
+	
+	.fflist{
+		float: left;
+		padding:29px  14px 11px 0;
+		height:146px;
+
+	}
+	#qh3A{
+
+		padding-top: 0;
+		font-size: 14px;
+	}
+	.xtflist{
+		background: url(img/ds.png) no-repeat;
+
+	}
+
+		
+	.imga a{
+
+		display: block;
+
+	}
+
+	
+
+	.libackgrd{
+			
+			background: #e8e8e8;
+			font:12px/31px "微软雅黑";
+			color: #000055;
+			padding-bottom: 1px;
+
+		}
+	
+	
+	 .top_list{
+
+		float: left;
+		width:228px;
+		border: 1px solid  #d3d3d3;
+		margin:20px 0 40px 0 ;
+		margin-right: -1px;
+		;
+	}
+	#top_list hgroup{
+
+		padding: 19px 20px 20px ;
+	}
+	.top_list_header{
+			float: left;
+			margin-right: 10px ;
+			padding: 19px 0 9px 19px;
+	}
+	.top_list_head{
+			float: left;
+			padding-top:19px;
+
+	}
+	.top_list_header img{
+
+		width:80px;
+		height:80px;
+	}
+	.top_head_ioc{
+		position: absolute;
+		top:0;
+		left:0;
+		width:80px;
+		height:80px;
+		background: url(img/fd.png) no-repeat;
+
+	}
+	.top_list_head h3{
+		font-size: 12px;
+		line-height: 32px;
+		color: #333;
+
+	}
+	.top_list_head a{
+
+		color: #333;
+	}
+	.top_play,
+	.top_file{
+		float: left;
+		margin-right: 8px;
+		width: 22px;
+		height: 22px;
+		background: url(img/as.png) no-repeat;
+
+	}
+
+	.top_list_con li{
+			position: relative;
+			padding-left: 15px;
+			width:213px;
+			height: 32px;
+			line-height: 32px;
+			font-size:12px;
+			
+			
+	}
+	.top_list_con a{
+		color: #000055;
+	}
+	.top_list_con mark,
+	.top_list_con em{
+
+		display: inline-block;
+		width: 35px;
+		height: 32px;
+		text-align: center;
+		background: none;
+	}
+	.top_list_con mark{
+		color: #c40d0c;
+
+	}
+	.top_list_con em{
+		color: #666666;
+	}
+	.list_button{
+
+		position: absolute;
+		top:0;
+		right: 0;
+		padding-top:7px;
+		width: 80px;
+
+	}
+	.warpleft{
+
+		float: left;
+		width:690px;
+		margin:auto;
+		border-left:1px solid #d3d3d3;
+		padding-left: 20px;
+	}
+	#warpright{
+	float: right;
+	width: 250px;
+	border-left: 1px solid #d4d4d4;
+	height: 1454px;
+	
+	}
+	.songlist{
+	width: 210px;
+	padding: 0 20px;
+	margin-bottom: 15px;
+
+	}
+.enter{
+	
+	background:url(img/vf.png) repeat-x;
+	
+	border-bottom:1px solid #b1b1b1;
+	padding:16px 22px 0 ;
+
+
+}
+.enter p{
+	line-height: 22px;
+	color: #666;
+
+}
+.enter a{
+
+	display: block;
+	margin: 16px auto 0;
+	width: 100px;
+	height: 31px;
+	color: #fff;
+	background: url(img/wesd.png) no-repeat ;
+	padding-bottom: 15px;
+	text-decoration: none;
+}
+.enter a:hover{
+
+	background: url(img/dsdsd.png) no-repeat;
+}
+.sinheader{
+
+		padding-top: 10px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #ccc;
+}
+.DJhader{
+		
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 10px;
+		padding-top: 24px;
+
+}
+.libackgrd{
+
+	
+	height: 31px;
+	background: #e8e8e8;
+}
+.libackgrd a{
+
+	color: #000000;
+}
+.libackgrd .seeall{
+	padding-right: 30px;
+}
+.DJhader h3{
+		line-height: 29px;
+		
+		color: #333333;
+}
+.sinheader h3{
+
+	line-height: 28px;
+	color: #333333;
+	float: left;
+}
+.sinheader a{
+
+	line-height: 28px;
+	color: #666;
+}
+.seeall{
+
+	float: right;
+}
+
+.songmen img{
+
+	width: 62px;
+	height: 62px;
+}
+
+.songmen li{
+
+	height:62px;
+	margin-bottom: 14px;
+	width: 210px;
+	background: #fafafa;
+	border:1px solid #e9e9e9;
+	border-width: 1px 1px 1px 0;
+}
+.songmen li:hover{
+
+	background: #f4f4f4;
+}
+.mansinger{
+
+	width: 99px;
+	padding-left: 14px;
+
+
+
+}
+.mansinger strong{
+	font-size: 12px;
+	line-height: 35px;
+	font-family: bold;
+	color: #333333;
+
+}
+.mansinger em{
+	font-size: 12px;
+	line-height: 25px;
+	color: #666666;
+}
+.side_section_foot{
+	display: block;
+	width: 210px;
+	height: 31px;
+	text-align: center;
+	color: #333;
+	background: url(img/dh.png) no-repeat;
+
+}
+.side_section_foot a{
+	font: bold 12px/27px "宋体";
+	padding-top: 1px;
+	text-decoration: none;
+	color: #333; 
+
+}
+.lilili{
+	padding: 10px 0 0 0;
+
+}
+.lilili img{
+
+  height: 40px;
+  width: 40px;
+
+}
+.sectioncen{
+
+	background: #f5f5f5;
+}
+#boxtop{
+	width: 47px;
+	height: 42px;
+	background: url(img/rgdb.png) no-repeat;
+	position: fixed;
+	bottom: 162px;
+	left: 50%;
+	margin-left: 500px;
+
+
+}
+.footer{
+	height: 100px;
+	background: #f9f9f9;
+	border-bottom: 1px solid #000;
+	border-top: 1px solid #d5d5d5;
+
+}
+.warpfooter{
+	width: 990px;
+	margin: auto;
+
+
+}
+.fl {
+	float: left;
+} 
+.fr {
+	float: right;
+}
+.afooter{
+
+	float: left;
+	margin-top: 29px;
+	padding-left: 54px;
+	width: 246px;
+	height: 46px;
+	line-height: 22px;
+
+}
+.afooter em {
+	color: #666;
+}
+.afooter span {
+	color: #999;
+}
+#footer_nav{
+
+	margin-top: 29px;
+	line-height: 22px;
+	color: #9b9b9b;
+}
+#footer_nav a {
+	color: #9b9b9b;
+}
+#footer_nav .reback {
+
+	padding-left: 22px;
+	background: url(img/sapl.png) no-repeat 0 4px;
+}
+.fegfeng{
+
+		position: relative;
+		height:186px;
+	}
+.sjleft{
+	position: absolute;
+	top:73px;
+	left: 9px;
+	background: url(img/xczv.gif) no-repeat ;
+	width: 7px;
+	height: 13px;
+}
+.sjright{
+
+	position: absolute;
+	top:73px;
+	right: 9px;
+	background: url(img/right.gif) no-repeat ;
+	width: 7px;
+	height: 13px;
+}
+
+</style>
+
+</head>
+<body>
+
+	<header class="header clearfix">
+		<div class="warp clearfix">
+			<div class="nava clearfix">
+				<h1 class="logo">
+					<a href="#">
+						<img src="img/BB.png"/>
+					</a>
+				</h1>
+				<nav class="navlist">
+					<a  class="fond"  href="#"><span class="bagA"><span class="bagB">发现音乐</span><span class="redtop"></span></span></a>
+					<a href="#"><span class="bagA"><span class="bagB">我的音乐</span></span></a>
+					<a href="#"><span class="bagA"><span class="bagB">朋友</span></span></a>
+					<a href="#"><span class="bagA"><span class="bagB">下载客户端</span><span class="hot"></span></span>
+					</a>
+				</nav>
+			</div>
+			<div class="form clearfix" >
+				<form class="cont1">
+					<input class="submit" type="submit"/></input>
+					<input class="text" type="text" value="单曲/专辑/歌单/MV/用户"/></input>
+				</form>
+				<div class="cont2">
+					<a href="#">
+						<span>登录</span>
+						<img src="img/kk.png"/>
+						
+					</a>
+				</div>
+			</div>
+		</div><!--
+		头部-->
+	</header>
+	<nav class="nav">
+		<div class="warp">
+			<ul class="ul clearfix">
+				<li><a href="#"><span class="TJ_left"><span class="TJ_right">推荐</span></span></a></li>
+				<li><a href="#"><span class="TJ_left"><span class="TJ_right">排行榜</span></span></a></li>
+				<li><a href="#"><span class="TJ_left"><span class="TJ_right">歌单</span></span></a></li>
+				<li><a href="#"><span class="TJ_left"><span class="TJ_right">主播电台</span></span></a></li>
+				<li><a href="#"><span class="TJ_left"><span class="TJ_right">歌手</span></span></a></li>
+				<li><a href="#"><span class="TJ_left"><span class="TJ_right">新碟上架</span></span></a></li>
+			</ul>
+		</div>
+		
+	</nav>
+	<div class="pic">
+		<div class="warpA">
+			<div class="piclist">
+				<img src="img/ban.png"/>
+
+			</div>
+			<div class="picright">
+				<a href="#"></a>
+				<p>pc安卓ipone WP ipad 六大客户端</p>
+			</div>
+			<a  class="dwleft" href="#"></a>
+			<a class="dwright" href="#"></a>
+			<div class="ydd">
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+			</div>
+		</div>
+	</div>
+	<section class="sectioncen">
+			
+		<div class="warpB  clearfix">
+			<div class="warpleft">
+				<div class="contentA">
+					<div class="text">
+						<div class="navTJ clearfix">
+							<h2><a  class="title" href="#">热门推荐</a></h2> 
+							<nav class="navli clearfix">
+									<a href="#">华语</a>
+									<a href="#">流行</a>
+									<a href="#">摇滚</a>
+									<a href="#">民谣</a>
+									<a href="#">电子</a>
+							</nav>
+							<p class="navri">
+								<a href="#">更多</a>
+							</p>
+						</div>  
+					</div>
+					<div class="ulall">
+						<ul class="picliste clearfix">
+						<li class="yyli">
+							<div class="yybox">
+								<div class="yyboximg">
+									<div class="img">
+										<a href="#">
+											<img src="img/img.jpg"/>
+										
+											<span class="mask"></span>
+											<span class="ioc"></span>
+											<span class="textt">88万</span>
+											<span class="icoc"></span>
+										</a>
+									</div>
+									<h3 class="h3A">岁月未存慈悲，愿你始终不疑真心</h3>
+								</div>
+							</div>
+						</li>
+						<li class="yyli">
+							<div class="yybox">
+								<div class="yyboximg">
+									<div class="img">
+										<a href="#">
+											<img src="img/img.jpg"/>
+											<span class="mask"></span>
+											<span class="ioc"></span>
+											<span class="textt">19万</span>
+											<span class="icoc"></span>
+										</a>
+									</div>
+									<h3 class="h3A">砸了这小口自由</h3>
+								</div>
+							</div>
+						</li>
+						<li class="yyli">
+							<div class="yybox">
+								<div class="yyboximg">
+									<div class="img">
+										<a href="#">
+											<img src="img/img.jpg"/>
+											<span class="mask"></span>
+											<span class="ioc"></span>
+											<span class="textt">88万</span>
+											<span class="icoc"></span>
+
+										</a>
+									</div>
+									<h3 class="h3A">[华语说唱]说的唱的好听</h3>
+								</div>
+							</div>
+						</li>
+						<li class="yyli">
+							<div class="yybox">
+								<div class="yyboximg">
+									<div class="img">
+										<a href="#">
+											<img src="img/img.jpg"/>
+											<span class="mask"></span>
+											<span class="ioc"></span>
+											<span class="textt">88万</span>
+											<span class="icoc"></span>
+
+										</a>
+									</div>
+									<h3 class="h3A">经典难逃 1981</h3>
+								</div>
+							</div>
+						</li>
+						<li class="yyli">
+							<div class="yybox">
+								<div class="yyboximg">
+									<div class="img">
+										<a href="#">
+											<img src="img/img.jpg"/>
+											<span class="mask"></span>
+											<span class="ioc"></span>
+											<span class="textt">88万</span>
+											<span class="icoc"></span>
+
+										</a>
+									</div>
+									<h3 class="h3A">给我一把弹不累的吉他</h3>
+								</div>
+							</div>
+						</li>
+						<li class="yyli">
+							<div class="yybox">
+								<div class="yyboximg">
+									<div class="img">
+										<a href="#">
+											<img src="img/img.jpg"/>
+											<span class="mask"></span>
+											<span class="ioc"></span>
+											<span class="textt">88万</span>
+											<span class="icoc"></span>
+
+										</a>
+									</div>
+									<h3 class="h3A">健身搭讪指南</h3>
+								</div>
+							</div>
+						</li>
+						<li class="yyli">
+							<div class="yybox">
+								<div class="yyboximg">
+									<div class="img">
+										<a href="#">
+											<img src="img/img.jpg"/>
+											<span class="mask"></span>
+											<span class="ioc"></span>
+											<span class="textt">88万</span>
+											<span class="icoc"></span>
+
+										</a>
+									</div>
+									<h3 class="h3A">梦也缓缓.精选百首古风</h3>
+								</div>
+							</div>
+						</li>
+						<li class="yyli">
+							<div class="yybox">
+								<div class="yyboximg">
+									<div class="img">
+										<a href="#">
+											<img src="img/img.jpg"/>
+											<span class="mask"></span>
+											<span class="ioc"></span>
+											<span class="textt">88万</span>
+											<span class="icoc"></span>
+
+										</a>
+									</div>
+									<h3 class="h3A">SHOW ME THE MONEY EP09</h3>
+								</div>
+							</div>
+						</li>
+						</ul>
+					</div>
+					<div class="imgys">
+						<a href="#">
+							<img src="img/df.png"/>
+						</a>
+					</div>
+				</div>
+			
+				<div class="contentB">
+					<div class="navTJ clearfix">
+						<h2 class="title">新碟上架</h2> 
+						<p class="navri"><a href="#">更多</a></p>
+					</div>
+					<div class="fegfeng">
+						<ul class="new clearfix">
+							<li class="fflist">
+								<div class="imga">
+									<a href="#">
+										<img src="img/vbcdf.png"/>
+										<h3 class="h3A" id="qh3A">十三亿分贝第二期</h3>
+										<p>群星</p>
+									</a>
+								</div>
+							</li>
+							<li class="fflist">
+								<div class="imga">
+									<a href="#">
+										<img src="img/vbcdf.png"/>
+										<h3 class="h3A" id="qh3A">十三亿分贝第二期</h3>
+										<p>群星</p>
+									</a>
+								</div>
+							</li>
+							<li class="fflist">
+								<div class="imga">
+									<a href="#">
+										<img src="img/vbcdf.png"/>
+										<h3 class="h3A" id="qh3A">十三亿分贝第二期</h3>
+										<p>群星</p>
+									</a>
+								</div>
+							</li>
+							<li class="fflist">
+								<div class="imga">
+									<a href="#">
+										<img src="img/vbcdf.png"/>
+										<h3 class="h3A" id="qh3A">十三亿分贝第二期</h3>
+										<p>群星</p>
+									</a>
+								</div>
+							</li>
+							<li class="fflist">
+								<div class="imga">
+									<a href="#">
+										<img src="img/vbcdf.png"/>
+										<h3 class="h3A" id="qh3A">十三亿分贝第二期</h3>
+										<p>群星</p>
+									</a>
+								</div>
+							</li>
+							
+						</ul>
+						<a  class="sjleft" href="#"></a>
+						<a class="sjright" href="#"></a>
+					</div>
+				</div>
+				<div class="contentC">
+					<div class="navTJ clearfix">
+							<h2 class="title">榜首</h2> 
+							<p class="navri"><a href="#">更多</a></p>
+					</div>
+					<ul id="top_list clearfix" >
+							<li class="top_list">
+									<hgroup class="clear_fix clearfix">
+										<div class="top_list_header">
+											<a href="#">
+												<img src="img/fd.png"/>
+												<span class="top_head_ico"></span>
+											</a>
+										</div>
+										<div class="top_list_head">
+											<h3><a href="#">云音乐飙升榜</a></h3>
+											<a class="top_play" href="#"></a>
+											<a class="top_file" href="#"></a>
+										</div>
+									</hgroup>
+									<ol class="top_list_con">
+										<li class="libackgrd">
+												<mark>1</mark>
+												<a href="#">耿耿于怀</a>
+										</li>
+										<li>
+												<mark>2</mark>
+												<a href="#">还魂们</a>
+										</li>
+										<li class="libackgrd">
+												<mark>3</mark>
+												<a href="#">在，也不见-From"Distance"/…</a>
+										</li>
+										<li>
+												<em>4</em>
+												<a href="#">7Years</a>
+										</li>
+										<li class="libackgrd">
+											<em>5</em>
+											<a href="#">One Dance</a>
+										</li>
+										<li>
+											<em>6</em>
+											<a href="#">红蔷薇白玫瑰</a>
+										</li>
+										<li class="libackgrd">
+											<em>7</em>
+											<a href="#">别说</a>
+										</li>
+										<li>
+											<em>8</em>
+											<a href="#">再见之前</a>
+										</li>
+										<li class="libackgrd">
+											<em>9</em>
+											<a href="#">It’s Man(Klangkuenstler…</a>
+										</li>
+										<li>
+											<em>10</em>
+											<a href="#">Lights Out(Cxtended Mix)</a>
+										</li>
+
+									</ol>
+									<p class="libackgrd">
+										<a class="seeall" href="#">查看全部></a>
+									</p>
+							</li>
+							<li class="top_list">
+									<hgroup class="clear_fix clearfix">
+									<div class="top_list_header">
+										<a href="#">
+											<img src="img/fd.png"/>
+											<span class="top_head_ico"></span>
+										</a>
+									</div>
+									<div class="top_list_head">
+										<h3><a href="#">云音乐飙升榜</a></h3>
+										<a class="top_play" href="#"></a>
+										<a class="top_file" href="#"></a>
+									</div>
+									</hgroup>
+									<ol class="top_list_con clearfix">
+										<li class="libackgrd">
+												<mark>1</mark>
+												<a href="#">耿耿于怀</a>
+										</li>
+										<li>
+												<mark>2</mark>
+												<a href="#">还魂们</a>
+										</li>
+										<li class="libackgrd">
+												<mark>3</mark>
+												<a href="#">在，也不见-From"Distance"/…</a>
+										</li>
+										<li>
+												<em>4</em>
+												<a href="#">7Years</a>
+										</li>
+										<li class="libackgrd">
+											<em>5</em>
+											<a href="#">One Dance</a>
+										</li>
+										<li>
+											<em>6</em>
+											<a href="#">红蔷薇白玫瑰</a>
+										</li>
+										<li class="libackgrd">
+											<em>7</em>
+											<a href="#">别说</a>
+										</li>
+										<li>
+											<em>8</em>
+											<a href="#">再见之前</a>
+										</li>
+										<li class="libackgrd">
+											<em>9</em>
+											<a href="#">It’s Man(Klangkuenstler…</a>
+										</li>
+										<li>
+											<em>10</em>
+											<a href="#">Lights Out(Cxtended Mix)</a>
+										</li>
+
+									</ol>
+									<p class="libackgrd">
+										
+										<a class="seeall" href="#">查看全部></a>
+									</p>
+							</li>	
+							
+							<li class="top_list">
+									<hgroup class="clear_fix clearfix">
+									<div class="top_list_header">
+										<a href="#">
+											<img src="img/fd.png"/>
+											<span class="top_head_ico"></span>
+										</a>
+									</div>
+									<div class="top_list_head">
+										<h3><a href="#">云音乐飙升榜</a></h3>
+										<a class="top_play" href="#"></a>
+										<a class="top_file" href="#"></a>
+									</div>
+									</hgroup>
+									<ol class="top_list_con">
+										<li class="libackgrd">
+												<mark>1</mark>
+												<a href="#">耿耿于怀</a>
+										</li>
+										<li>
+												<mark>2</mark>
+												<a href="#">还魂们</a>
+										</li>
+										<li class="libackgrd">
+												<mark>3</mark>
+												<a href="#">在，也不见-From"Distance"/…</a>
+										</li>
+										<li>
+												<em>4</em>
+												<a href="#">7Years</a>
+										</li>
+										<li class="libackgrd">
+											<em>5</em>
+											<a href="#">One Dance</a>
+										</li>
+										<li>
+											<em>6</em>
+											<a href="#">红蔷薇白玫瑰</a>
+										</li>
+										<li class="libackgrd">
+											<em>7</em>
+											<a href="#">别说</a>
+										</li>
+										<li>
+											<em>8</em>
+											<a href="#">再见之前</a>
+										</li>
+										<li class="libackgrd">
+											<em>9</em>
+											<a href="#">It’s Man(Klangkuenstler…</a>
+										</li>
+										<li>
+											<em>10</em>
+											<a href="#">Lights Out(Cxtended Mix)</a>
+										</li>
+
+									</ol>
+									<p class="libackgrd">
+										<a class="seeall" href="#">查看全部></a>
+									</p>
+							</li>	
+					</ul>
+				</div>
+			</div>
+
+			<div id="warpright"> 
+				<div class="enter">
+					<p>登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p>
+					<a class="red" href="#"></a>
+				</div>
+				<div class="songlist">
+					<div class="singer">
+						<header class="sinheader clearfix ">
+							<h3>入驻歌手</h3>
+							<a href="#"  class="seeall">查看全部></a>
+						</header>
+						<ul class="songmen">
+							
+							<li>
+								<a class="mayouli" href="#">
+								<img class="fl" src="img/bao.png"/>
+								<div  id="hotman_1" class="fl">
+									<a class="mayou" href="#">马鮋麻油叶</a>
+									<p>民谣音乐人</p>
+								</div>
+								</a>
+							</li>
+							<li>
+									<img class="fl" src="img/bao.png"/>
+									<div  id="hotman_1" class="fl">
+										<a class="mayou" href="#">马鮋麻油叶</a>
+										<p>民谣音乐人</p>
+									</div>
+							</li>
+							<li>
+									<img class="fl" src="img/bao.png"/>
+									<div  id="hotman_1" class="fl">
+										<a class="mayou" href="#">马鮋麻油叶</a>
+										<p>民谣音乐人</p>
+									</div>
+							</li>
+							<li>
+									<img class="fl" src="img/bao.png"/>
+									<div  id="hotman_1" class="fl">
+										<a class="mayou" href="#">马鮋麻油叶</a>
+										<p>民谣音乐人</p>
+									</div>
+							</li>
+							<li>
+									<img class="fl" src="img/bao.png"/>
+									<div  id="hotman_1" class="fl">
+										<a class="mayou" href="#">马鮋麻油叶</a>
+										<p>民谣音乐人</p>
+									</div>
+							</li>
+							
+						</ul>
+						<div class="side_section_foot">
+							<a href="#">申请成为网易音乐人</a>
+						</div>
+					</div>
+					<div class="hotDJ">
+						<header class="DJhader">
+							<h3>
+								<a href="#">热门DJ</a>
+							</h3>
+						</header>
+						<ul class="DJlist">
+							<li class="lilili clearfix"> 
+									
+									<img class="fl"src="img/ca.png"/>
+									<div  id="hotman" class="fl">
+										<a href="#">林海</a>
+										<p>著名音乐节目主持人</p>
+									</div>
+							</li>
+							<li class="lilili clearfix"> 
+									
+									<img class="fl"src="img/ca.png"/>
+									<div  id="hotman" class="fl">
+										<a href="#">林海</a>
+										<p>著名音乐节目主持人</p>
+									</div>
+							</li>
+							<li class="lilili clearfix"> 
+									
+									<img class="fl"src="img/ca.png"/>
+									<div  id="hotman" class="fl">
+										<a href="#">林海</a>
+										<p>著名音乐节目主持人</p>
+									</div>
+							</li>
+							<li class="lilili clearfix"> 
+									
+									<img class="fl"src="img/ca.png"/>
+									<div  id="hotman" class="fl">
+										<a href="#">林海</a>
+										<p>著名音乐节目主持人</p>
+									</div>
+							</li>
+							<li class="lilili clearfix"> 
+									
+									<img class="fl"src="img/ca.png"/>
+									<div  id="hotman" class="fl">
+										<a href="#">林海</a>
+										<p>著名音乐节目主持人</p>
+									</div>
+							</li>
+							
+							
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<a  id="boxtop" href="#"></a>
+
+	<footer class="footer">
+		<div class="warpfooter clearfix">
+			<div class="f1">
+				<a href="#" class="afooter">
+					<em>独立音乐人招募计划 </em>
+					<br/>
+					<span>加入我们 即将与超过亿万乐迷互动</span>
+				</a>
+				<a href="#" class="afooter">
+					<em>独立音乐人招募计划 </em>
+					<br/>
+					<span>加入我们 即将与超过亿万乐迷互动</span>
+				</a>
+			</div>
+		
+			<nav id="footer_nav" class="fr">
+				<p>
+					<a href="#">关于网易-</a>
+					<a href="#">客户服务-</a>
+					<a href="#">服务条款-</a>
+					<a href="#">网站导航</a>
+				</p>
+				<p>
+				<span> 网易公司版权所有©1997-2016</span>
+				</p>
+				<p class="pfooter clearfix">
+					<em class="f1">网络文化经营许可证：</em>
+					<a class="f1" href="#">[[2016]0155-055号]</a>
+					<a class="reback fr" href="#">意见反馈</a>
+				</p>
+
+			</nav>
+		</div>
+	</footer>
+			
+	
+	
+	
+
+</body>
+</html>
